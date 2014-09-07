@@ -1,0 +1,187 @@
+//--------------------IDLE GAME MAKER--------------------
+
+
+
+
+
+Let's make a game!
+Piano Player
+by Logan Pihl
+version 0.2
+created on 05/09/2014
+last updated on 05/10/2014
+
+//changelog: ver 0.1
+//began development of game
+//created 1 building
+//created 1 achievement
+//created 1 upgrade
+//created 1 resource
+//created 1 clickable
+
+//changelog: ver 0.2
+//created 1 achievement
+//created 1 upgrade
+//created 2 resources
+
+Settings :
+prices increase by 110%
+selling gives back 50%
+resources are visible by default
+clickables are visible by default
+buildings are visible by default
+upgrades are hidden by default
+achievements are hidden by default
+custom stylesheet : http://pastebin.com/raw.php?i=WB09D8PY
+background : grey
+
+Resources :
+
+*Notes
+starts at 100000000000
+show 0 digits
+displayed as You have %a note%s
+
+*NotesPlayed
+starts at 0
+show 0 digits
+displayed as Notes played all time: %a
+
+*NotesHand
+starts at 0
+show 0 digits
+displayed as You've played %a notes by yourself
+
+*NotesGen
+starts at 0
+show 0 digits
+displayed as You've had %a note%s generated
+
+*EntNotes
+hidden
+starts at 0
+show 0 digits
+displayed as You've achieved %a entranced note%s
+
+Clickables :
+
+*BabyPiano
+gives 1 Notes
+gives 1 NotesPlayed
+gives 1 NotesHand
+picture : 
+named Baby Piano
+
+*KiddiePiano
+gives 1 EntNotes
+locks GetPiano
+
+Buildings :
+
+*GetPiano
+"You've finally been deemed worthy enough to receive a new piano."
+hidden
+visible at 10000000000 Notes
+starts at 0
+costs 100000000000 Notes
+unlocks KiddiePiano
+unlocks EnchPlay
+gives 1 EntNotes
+named Get a new Piano!
+
+*Trainer
+"You can't just go out and play without training, you'd sound horrible. Generates <b>one</b> note every <b>ten</b> seconds."
+starts at 0
+costs 10 Notes
+gives 0.1 Notes
+gives 0.1 NotesPlayed
+gives 0.1 NotesGen
+
+*Song
+"You can't play for people without a song! Generates <b>one</b> note every <b>two</b> seconds."
+starts at 0
+costs 100 Notes
+gives 0.5 Notes
+gives 0.5 NotesPlayed
+gives 0.5 NotesGen
+picture : 
+
+*EnchPlay
+"An enchanted player to play the piano for you. Generates <b>ten billion</b> notes every <b>second</b> and <b>one</b> entranced note every <b>one hundred</b> seconds."
+starts at 0
+costs 1 EntNotes
+costs 1000000000000 Notes
+gives 0.01 EntNotes
+gives 10000000000 Notes
+named Enchanted player
+
+Upgrades :
+
+//Trainers
+
+//Songs
+
+*BetterComp
+"Multiplies efficiency of your Song(s) by <b>x2</b>. <i>"At least the song is bearable to listen to now."</i>"
+multiplies efficiency of Song by 200%
+unlocks at 1 Song
+requires 100 Notes
+named Better compositions
+picture :
+
+*SheetMusic
+"Multiplies efficiency of your Songs by <b>x2</b>. <i>"Much easier to remember now!"</i>"
+multiplies efficiency of Song by 200%
+unlocks at 10 Song
+requires 500 Notes
+named Sheet music
+picture : 
+
+*CreaThink
+"Multiplies efficiency of your Songs by <b>x2</b>. <i>"Wow, your songs actually sound good now!"</i>"
+multiplies efficiency of Song by 200%
+unlocks at 25 Song
+requires 1000 Notes
+named Creative thinking
+picture :  
+
+//Clicking
+
+*LargerHands
+"gives <b>+1</b> per baby piano click. <i>"You can hit an octave if you stretch, I guess."</i>"
+multiplies efficiency of BabyPiano by 200%
+unlocks at 100 NotesHand
+requires 100 Notes
+named Larger hands
+picture :
+
+Achievements :
+
+//Notes Acquired
+
+*Baby
+"Welcome to Piano Player! <i>"Don't worry, new pianos will come your way."</i>"
+unlocks at 1 NotesPlayed
+named Welcome!
+picture : 
+
+*YoureOkay
+"Made 100 Notes! <i>"Kind of a short song if you ask me."</i>"
+unlocks at 100 NotesPlayed
+named You're okay at this
+picture : 
+
+//Building Achievements
+
+//Song
+
+*Twinkletwinkle
+"Made your first song! <i>"Don't tell anybody I said this, but it's not that good."</i>"
+unlocks at 1 Song
+named Twinkle, twinkle...
+picture : 
+
+*Composer
+"You've composed 10 songs! <i>"Getting better."</i>"
+unlocks at 10 Song
+picture :
